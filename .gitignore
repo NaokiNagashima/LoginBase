@@ -1,9 +1,5 @@
-/nbproject/
-
-/Plugin/
-
-/Vendor/
-
-/tmp/
-
+/nbproject
+/Plugin
+/Vendor
+/tmp
 /Config/database.php
