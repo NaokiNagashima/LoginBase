@@ -20,9 +20,9 @@
 		<td><?php echo h($user['User']['email']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['role']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link('View', array('action' => 'view', $user['User']['id'])); ?>
-			<?php echo $this->Html->link('Edit', array('action' => 'edit', $user['User']['id'])); ?>
-			<?php echo $this->Form->postLink('Delete', array('action' => 'delete', $user['User']['id']), array('confirm' => 'Are you sure you want to delete # %s?', $user['User']['id'])); ?>
+			<?php echo $this->Html->link('表示', array('action' => 'view', $user['User']['id'])); ?>
+			<?php echo $this->Html->link('編集', array('action' => 'edit', $user['User']['id'])); ?>
+			<?php echo $this->Form->postLink('削除', array('action' => 'delete', $user['User']['id']), array('confirm' => 'Are you sure you want to delete # %s?', $user['User']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -36,15 +36,15 @@
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . 'previous', array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . '前へ', array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next('next' . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next('次へ' . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
 	<h3><?php echo 'Actions'; ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link('New User', array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link('新規ユーザー', array('action' => 'add')); ?></li>
 	</ul>
 </div>
